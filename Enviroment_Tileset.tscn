@@ -474,6 +474,7 @@ polygon = PoolVector2Array( -32, -32, -32, -32, 32, -32, 32, 32, -32, 32, -32, -
 
 [node name="Star" type="Sprite" parent="." index="17"]
 
+editor/display_folded = true
 position = Vector2( 448, 96 )
 texture = ExtResource( 6 )
 region_rect = Rect2( 656, 336, 32, 32 )
