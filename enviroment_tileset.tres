@@ -363,7 +363,7 @@ points = PoolVector2Array( -32, -32, -32, -32, 32, -32, 32, 32, -32, 32, -32, -3
 } ]
 13/name = "KeyGreen"
 13/texture = ExtResource( 4 )
-13/tex_offset = Vector2( 0, 0 )
+13/tex_offset = Vector2( 16, 16 )
 13/modulate = Color( 1, 1, 1, 1 )
 13/region = Rect2( 0, 0, 29, 30 )
 13/is_autotile = false
@@ -377,7 +377,7 @@ points = PoolVector2Array( -32, -32, -32, -32, 32, -32, 32, 32, -32, 32, -32, -3
 } ]
 14/name = "KeyRed"
 14/texture = ExtResource( 5 )
-14/tex_offset = Vector2( 0, 0 )
+14/tex_offset = Vector2( 16, 16 )
 14/modulate = Color( 1, 1, 1, 1 )
 14/region = Rect2( 0, 0, 29, 30 )
 14/is_autotile = false
@@ -391,7 +391,7 @@ points = PoolVector2Array( -32, -32, -32, -32, 32, -32, 32, 32, -32, 32, -32, -3
 } ]
 15/name = "Coin"
 15/texture = ExtResource( 1 )
-15/tex_offset = Vector2( 0, 0 )
+15/tex_offset = Vector2( 16, 16 )
 15/modulate = Color( 1, 1, 1, 1 )
 15/region = Rect2( 592, 336, 32, 32 )
 15/is_autotile = false
@@ -405,7 +405,7 @@ points = PoolVector2Array( -32, -32, -32, -32, 32, -32, 32, 32, -32, 32, -32, -3
 } ]
 16/name = "Coin2"
 16/texture = ExtResource( 1 )
-16/tex_offset = Vector2( 0, 0 )
+16/tex_offset = Vector2( 16, 16 )
 16/modulate = Color( 1, 1, 1, 1 )
 16/region = Rect2( 656, 336, 32, 32 )
 16/is_autotile = false
@@ -655,4 +655,5 @@ points = PoolVector2Array( -32, -32, -32, -32, 32, -32, 32, 32, -32, 32, -32, -3
 "shape": SubResource( 28 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
+_sections_unfolded = [ "12", "13", "14", "15", "16", "17" ]
 
