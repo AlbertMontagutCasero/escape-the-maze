@@ -22,7 +22,7 @@ func _ready():
 
 func set_camera_limits():
 	var map_size = $Ground.get_used_rect()
-	var cell_size = $Ground.cell_size()
+	var cell_size = $Ground.cell_size
 	$Player/Camera2D.limit_left = map_size.position.x * cell_size.x
 	$Player/Camera2D.limit_top = map_size.position.y * cell_size.y
 	$Player/Camera2D.limit_right = map_size.end.x * cell_size.x
@@ -47,14 +47,15 @@ func spawn_items():
 				var p = Pickup.instance()
 				p.init(type, pos)
 				add_child(p)
+				p.connect('coin_pickup', $HUD, 'update_score')
 
 
 func game_over():
-	pass
+	Global.game_over()
 
 
 func _on_Player_win():
-	pass
+	Global.next_level()
 
 
 func _on_Player_grabbed_key():

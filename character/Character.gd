@@ -5,15 +5,19 @@ export (int) var speed
 var tile_size = 64
 var can_move = true
 var facing = 'right'
-var moves = {'right': Vector2(1,0),
-			 'left': Vector2(-1,0),
-			 'up': Vector2(0,-1),
-			 'down': Vector2(0,1)}
+var moves = {
+	'right': Vector2(1,0),
+	'left': Vector2(-1,0),
+	'up': Vector2(0,-1),
+	'down': Vector2(0,1)
+}
 
-onready var raycasts = { 'right': $RayCastRight,
-						 'left': $RayCastLeft,
-						 'up': $RayCastUp,
-						 'down': $RayCastDown}
+onready var raycasts = {
+	'right': $RayCastRight,
+	'left': $RayCastLeft,
+	'up': $RayCastUp,
+	'down': $RayCastDown
+}
 
 """
  The Layer property places the object in one or more collision layers,
@@ -30,13 +34,14 @@ func move(dir):
 
 	can_move = false
 	$AnimationPlayer.play(facing)
-	$MoveTween.interpolate_property(self,
-									"position",
-									position,
-									position + moves[facing] * tile_size,
-									1.0 / speed, # 1 sec / speed to make match with the animation duration.
-									Tween.TRANS_SINE,
-									Tween.EASE_IN_OUT)
+	$MoveTween.interpolate_property(
+			self,
+			"position",
+			position,
+			position + moves[facing] * tile_size,
+			1.0 / speed, # 1 sec / speed to make match with the animation duration.
+			Tween.TRANS_SINE,
+			Tween.EASE_IN_OUT)
 	$MoveTween.start()
 	return true
 

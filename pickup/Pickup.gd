@@ -1,26 +1,30 @@
 extends Area2D
 
-var textures = { 'coin' : 'res://pickup/coin.png',
-				 'key_Red' : 'res://pickup/keyRed.png',
-				 'star' : 'res://pickup/star.png'}
+signal coin_pickup
+
+var textures = { 'Coin' : 'res://pickup/coin.png',
+				 'KeyRed' : 'res://pickup/keyRed.png',
+				 'Star' : 'res://pickup/star.png'}
 var type
 
 
 func _ready():
-	$Tween.interpolate_property($Sprite,
-								'scale',
-								Vector2(1,1),
-								Vector2(3,3),
-								0.5,
-								Tween.TRANS_QUAD,
-								Tween.EASE_IN_OUT)
-	$Tween.interpolate_property($Sprite,
-								'modulate',
-								Color(1,1,1,1),
-								Color(1,1,1,0),
-								0.5,
-								Tween.TRANS_QUAD,
-								Tween.EASE_IN_OUT)
+	$Tween.interpolate_property(
+		$Sprite,
+		'scale',
+		Vector2(1,1),
+		Vector2(3,3),
+		0.5,
+		Tween.TRANS_QUAD,
+		Tween.EASE_IN_OUT)
+	$Tween.interpolate_property(
+		$Sprite,
+		'modulate',
+		Color(1,1,1,1),
+		Color(1,1,1,0),
+		0.5,
+		Tween.TRANS_QUAD,
+		Tween.EASE_IN_OUT)
 
 """
  Some programming languages use the notion of private functions or variables,
@@ -36,6 +40,9 @@ func init(_type, pos):
 
 
 func pickup():
+	match type:
+		'Coin':
+			emit_signal('coin_pickup', 1)
 	$CollisionShape2D.disabled = true
 	$Tween.start()
 

@@ -11,12 +11,21 @@ config_version=3
 [application]
 
 config/name="scape-the-maze"
+run/main_scene="res://ui/StartScreen.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+Global="*res://Global.gd"
 
 [display]
 
 window/stretch/mode="viewport"
 window/stretch/aspect="keep"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "godot-inheritance-dock" )
 
 [input]
 

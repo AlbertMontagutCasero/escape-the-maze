@@ -7,7 +7,7 @@
 [ext_resource path="res://pickup/keyRed.png" type="Texture" id=5]
 [ext_resource path="res://pickup/star.png" type="Texture" id=6]
 
-[node name="Enviroment_Tileset" type="Node2D" index="0"]
+[node name="Enviroment_Tileset" type="Node2D"]
 
 position = Vector2( 32, 32 )
 _sections_unfolded = [ "Transform" ]
